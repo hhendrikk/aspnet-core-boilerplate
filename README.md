@@ -1,4 +1,4 @@
-# Aspnet Core Boilerplate
+# AspNet Core Boilerplate
 
 - LanguageExt
 - Serilog
