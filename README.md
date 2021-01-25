@@ -1,2 +1,4 @@
-# aspnet-core-boilerplate
-start aspnet core project
+# Aspnet Core Boilerplate
+
+- LanguageExt
+- Serilog
