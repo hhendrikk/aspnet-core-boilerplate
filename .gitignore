@@ -351,3 +351,5 @@ MigrationBackup/
 
 .vscode/
 workspace.code-workspace
+data/
+!src/Api/Data

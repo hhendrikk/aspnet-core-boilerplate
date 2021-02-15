@@ -1,12 +1,11 @@
-using Autofac.Extensions.DependencyInjection;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Hosting;
-using Serilog;
-using Serilog.Exceptions;
-using System;
-
 namespace Api
 {
+    using Autofac.Extensions.DependencyInjection;
+    using Microsoft.AspNetCore.Hosting;
+    using Microsoft.Extensions.Hosting;
+    using Serilog;
+    using System;
+
     public class Program
     {
         public static void Main(string[] args)
@@ -21,7 +20,7 @@ namespace Api
                     .MinimumLevel.Debug()
                     .WriteTo.Console()
                     .CreateLogger();
-                    
+
                 Log.Fatal(ex, "Host terminated unexpectedly");
             }
             finally
@@ -30,7 +29,7 @@ namespace Api
             }
         }
 
-        public static IHostBuilder CreateHostBuilder(string[] args) =>
+        private static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
                 .UseServiceProviderFactory(new AutofacServiceProviderFactory())
                 .ConfigureWebHostDefaults(webBuilder =>
