@@ -2,6 +2,7 @@
 {
     using Api.Infrastructure;
     using Api.Services.Contracts;
+    using Data.Context;
     using LanguageExt;
     using System;
     using System.Collections.Generic;
@@ -14,8 +15,7 @@
     {
         public EitherAsync<Notification, string> HelloSample(Option<string> message) =>
             message.Match(
-                value => RightAsync<Notification, string>(value),
-                () => LeftAsync<Notification, string>(Notification.Notify("Message is required!"))
-                );
+                RightAsync<Notification, string>,
+                () => LeftAsync<Notification, string>(Notification.Notify("Message is required!")));
     }
 }

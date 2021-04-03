@@ -21,9 +21,6 @@ namespace Api
 
         public void ConfigureServices(IServiceCollection services)
         {
-
-            services.AddOptions();
-
             services.AddControllers();
 
             services.AddApiVersioning(setup =>
