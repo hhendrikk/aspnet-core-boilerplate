@@ -19,7 +19,7 @@ namespace Api.Infrastructure.Resources {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Env {
@@ -61,74 +61,11 @@ namespace Api.Infrastructure.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to default.
+        ///   Looks up a localized string similar to ConnectionStrings:Default.
         /// </summary>
-        internal static string ConnectionStringDefault {
+        internal static string ConnectionStringsDefault {
             get {
-                return ResourceManager.GetString("ConnectionStringDefault", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Security:Authority.
-        /// </summary>
-        internal static string SecurityAuthority {
-            get {
-                return ResourceManager.GetString("SecurityAuthority", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Security:CallbackPath.
-        /// </summary>
-        internal static string SecurityCallbackPath {
-            get {
-                return ResourceManager.GetString("SecurityCallbackPath", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Security:ClientId.
-        /// </summary>
-        internal static string SecurityClientId {
-            get {
-                return ResourceManager.GetString("SecurityClientId", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Security:ClientSecret.
-        /// </summary>
-        internal static string SecurityClientSecret {
-            get {
-                return ResourceManager.GetString("SecurityClientSecret", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Security:ResponseType.
-        /// </summary>
-        internal static string SecurityResponseType {
-            get {
-                return ResourceManager.GetString("SecurityResponseType", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Security:Scopes.
-        /// </summary>
-        internal static string SecurityScopes {
-            get {
-                return ResourceManager.GetString("SecurityScopes", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to SessionCookieLifetimeMinutes.
-        /// </summary>
-        internal static string SessionCookieLifetimeMinutes {
-            get {
-                return ResourceManager.GetString("SessionCookieLifetimeMinutes", resourceCulture);
+                return ResourceManager.GetString("ConnectionStringsDefault", resourceCulture);
             }
         }
     }

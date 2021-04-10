@@ -1,11 +1,13 @@
 namespace Api.Controllers.V1
 {
-    using Controllers;
-    using Microsoft.AspNetCore.Authentication.OpenIdConnect;
+    using System.Threading.Tasks;
+
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
+
+    using Controllers;
+
     using Services.Contracts;
-    using System.Threading.Tasks;
 
     [ApiController]
     [ApiVersion("1.0")]

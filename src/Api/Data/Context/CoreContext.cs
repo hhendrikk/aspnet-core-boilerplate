@@ -24,7 +24,7 @@ namespace Api.Data.Context
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseNpgsql(_configuration.GetConnectionString(Env.ConnectionStringDefault), options =>
+            optionsBuilder.UseNpgsql(_configuration.GetConnectionString(Env.ConnectionStringsDefault), options =>
             {
                 options.CommandTimeout(120);
             });

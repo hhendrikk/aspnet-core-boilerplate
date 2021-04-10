@@ -47,7 +47,7 @@
 	  <Compile Update="Infrastructure\Resources\Env.Designer.cs">
 	    <DesignTime>True</DesignTime>
 	    <AutoGen>True</AutoGen>
-	    <DependentUpon>Environment.resx</DependentUpon>
+	    <DependentUpon>Env.resx</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
