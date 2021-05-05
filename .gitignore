@@ -353,3 +353,4 @@ MigrationBackup/
 workspace.code-workspace
 data/
 !src/Api/Data
+.idea
