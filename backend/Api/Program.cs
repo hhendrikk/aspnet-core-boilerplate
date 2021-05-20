@@ -1,10 +1,10 @@
 namespace Api
 {
+    using System;
     using Autofac.Extensions.DependencyInjection;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.Extensions.Hosting;
     using Serilog;
-    using System;
 
     public class Program
     {
@@ -14,7 +14,7 @@ namespace Api
             {
                 CreateHostBuilder(args).Build().Run();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Log.Logger = new LoggerConfiguration()
                     .MinimumLevel.Debug()

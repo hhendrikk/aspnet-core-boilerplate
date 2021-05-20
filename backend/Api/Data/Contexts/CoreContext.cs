@@ -8,13 +8,13 @@ namespace Api.Data.Context
 
     public class CoreContext : DbContext
     {
-        private readonly IHostEnvironment _environment;
-        private readonly IConfiguration _configuration;
+        private readonly IHostEnvironment environment;
+        private readonly IConfiguration configuration;
 
         public CoreContext(IHostEnvironment environment, IConfiguration configuration)
         {
-            _environment = environment;
-            _configuration = configuration;
+            this.environment = environment;
+            this.configuration = configuration;
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -24,12 +24,12 @@ namespace Api.Data.Context
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseNpgsql(_configuration.GetConnectionString(Env.ConnectionStringsDefault), options =>
+            optionsBuilder.UseNpgsql(this.configuration.GetConnectionString(Env.ConnectionStringsDefault), options =>
             {
                 options.CommandTimeout(120);
             });
 
-            if (_environment.IsDevelopment())
+            if (this.environment.IsDevelopment())
             {
                 optionsBuilder.EnableDetailedErrors();
                 optionsBuilder.EnableSensitiveDataLogging();
