@@ -41,7 +41,7 @@ namespace Api
                         loggerConfiguration
                             .ReadFrom.Configuration(context.Configuration)
                             .Enrich.WithProperty("ApplicationName", typeof(Program).Assembly.GetName().Name)
-                            .Enrich.WithProperty("Environment", context.HostingEnvironment);
+                            .Enrich.WithProperty("Environment", context.HostingEnvironment.EnvironmentName);
                     });
                 });
     }
