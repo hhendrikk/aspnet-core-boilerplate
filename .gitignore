@@ -347,10 +347,12 @@ healthchecksdb
 MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
+backend/.ionide/
+backend/.vscode/
+backend/.idea
 .ionide/
-
 .vscode/
+.idea
+
 workspace.code-workspace
 data/
-!src/Api/Data
-.idea
