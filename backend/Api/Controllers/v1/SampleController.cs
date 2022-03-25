@@ -11,6 +11,6 @@ using Microsoft.AspNetCore.Mvc;
 public class SampleController : ApiControllerBase
 {
     [HttpGet("hello-world")]
-    public Task<IActionResult> GetHelloWorldAsync(CancellationToken cancellation)
-        => BuildResponseAsync(EitherAsync<Notification, string>.RightAsync(Task.FromResult("Hello World")));
+    public Task<IActionResult> GetHelloWorldAsync(CancellationToken cancellation) =>
+        BuildResponseAsync(EitherAsync<Notification, string>.RightAsync(Task.FromResult("Hello World")));
 }

@@ -1,18 +1,18 @@
 namespace Infrastructure.Data.Core;
 
+using Infrastructure.Settings;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 
 public class CoreContext : DbContext
 {
     private readonly IHostEnvironment environment;
-    private readonly IConfiguration configuration;
+    private readonly ConnectionStringsSettings connectionStrings;
 
-    public CoreContext(IHostEnvironment environment, IConfiguration configuration)
+    public CoreContext(IHostEnvironment environment, ConnectionStringsSettings connectionStrings)
     {
         this.environment = environment;
-        this.configuration = configuration;
+        this.connectionStrings = connectionStrings;
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -22,7 +22,7 @@ public class CoreContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseNpgsql(this.configuration.GetConnectionString(Constants.ConnectionStringDefault), options =>
+        optionsBuilder.UseNpgsql(this.connectionStrings.Default, options =>
         {
             options.CommandTimeout(120);
         });

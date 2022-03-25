@@ -1,6 +1,7 @@
 namespace Api;
 
 using Autofac;
+using Infrastructure.Settings;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -45,7 +46,7 @@ public class Startup
     public void ConfigureContainer(ContainerBuilder builder)
     {
         builder.RegisterAssemblyModules(typeof(Startup).Assembly);
-        builder.RegisterAssemblyModules(typeof(Infrastructure.Constants).Assembly);
+        builder.RegisterModule(new SettingsModule(Configuration));
     }
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
